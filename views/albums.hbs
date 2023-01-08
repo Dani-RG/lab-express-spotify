@@ -1,6 +1,12 @@
-<h1>Albums</h1>
-{{#each albums}}
-    <h2>{{name}}</h2>
-    <img src={{images.[0].url}} alt={{name}}/>
-    <a href="/tracks/{{id}}">Tracks</a>  
-{{/each}}
+<body id="albums-page" class="pages-background">
+    <h1>Albums for: {{artist}}</h1>
+    <section id="albums-container">
+        {{#each albums}}
+            <div class="cards">
+                <img src={{images.[0].url}} alt={{name}}/>
+                <h2>{{name}}</h2>
+                <a href="/tracks/{{id}}">View Tracks</a>  
+            </div>
+        {{/each}}
+    </section>
+</body>

@@ -1,6 +1,11 @@
-<h1>Artist search results:</h1>
-{{#each artists}}
-    <h2>{{name}}</h2>
-    <img src={{images.[0].url}} alt={{name}}/>
-    <a href="/albums/{{id}}">View Albums</a>
-{{/each}}
+<body class="pages-backgroud">
+    <section id="artists-container">
+        {{#each artists}}
+            <div class="cards">
+                <img src={{images.[0].url}} alt={{name}}/>
+                <h2>{{name}}</h2>
+                <a href="/albums/{{id}}">View Albums</a>
+            </div>
+        {{/each}}
+    </section>
+</body>
